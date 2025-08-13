@@ -1,36 +1,121 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## 📈 TradeBrains Stock Ticker
 
-First, run the development server:
+A Next.js-based stock search and details application that allows users to search for stocks, view detailed price charts, and access stock information in real-time.  
+Built as part of the TradeBrains assignment.
+
+
+## 🚀 Features
+
+1. **Stock Search Functionality**
+   - Search for stock symbols using the provided API.
+   - Autocomplete-style dropdown with search suggestions.
+   - Click to navigate to stock detail pages.
+
+2. **Stock Details Page**
+   - Dynamic routing: `/stock/[symbol]`.
+   - Displays stock price chart, latest price, and volume.
+   - SEO-friendly meta tags for each stock.
+
+3. **Interactive Graphs**
+   - Price history visualization using **Recharts**.
+   - Line chart for prices & volume bar chart.
+   - Color-coded price change (green for gain, red for loss).
+
+4. **Error Handling**
+   - Custom error page for API failures.
+   - Retry & Home navigation buttons.
+
+5. **Bonus Features**
+   - Loading animation themed for stock data.
+   - Responsive design with Tailwind CSS.
+   - Dark mode-inspired gradient UI.
+
+
+
+## 🛠️ Tech Stack
+
+- **Frontend Framework:** Next.js (v15+)
+- **Styling:** Tailwind CSS
+- **Charts:** Recharts
+- **API:** TradeBrains Stock API
+- **Deployment:** Vercel
+
+
+
+## 📂 Project Structure
+
+
+trade-brains-assignment/
+│
+├── components/         # UI Components (SearchBar, Loader, ErrorPage, Charts)
+├── app/                # Next.js App Router Pages
+│   ├── page.jsx         # Home Page
+│   ├── stock/\[symbol]/  # Dynamic Stock Detail Page
+│
+├── lib/                # API utility functions
+├── public/              # Static assets
+├── styles/              # Global styles (Tailwind config)
+└── README.md            # Project documentation
+
+
+
+## ⚙️ Environment Variables
+
+Before running locally, create a `.env.local` file:
+
+
+NEXT_PUBLIC_API_BASE_URL=https://example-api-url.com
+
+
+## 🖥️ Running Locally
 
 ```bash
+# 1. Clone the repository
+git clone https://github.com/mdsamir8863/trade-brains-assignment.git
+
+# 2. Navigate to the project directory
+cd trade-brains-assignment
+
+# 3. Install dependencies
+npm install
+
+# 4. Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# 5. Open in browser
+http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📦 Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is deployed on **Vercel**:
+🔗 [https://trade-brains-assignment-xi.vercel.app/](https://trade-brains-assignment-xi.vercel.app/)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📸 Screenshots
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Home Page
 
-## Deploy on Vercel
+*Search stocks with autocomplete suggestions*
+![Home Screenshot](./public/home.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Stock Details Page
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Interactive price and volume charts*
+![Details Screenshot](./public/details.png)
+
+
+## 🧑‍💻 Author
+
+**Md Samir Ansari**
+MERN Stack Developer specializing in frontend development.
+
+
+
+## 📜 License
+
+This project is for assignment purposes only. All rights reserved.
+
