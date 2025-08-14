@@ -1,4 +1,3 @@
-// src/app/stock/[symbol]/FavoriteButton.jsx
 "use client";
 
 import { useEffect, useState } from "react";

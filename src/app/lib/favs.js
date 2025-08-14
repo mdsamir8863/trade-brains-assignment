@@ -1,4 +1,3 @@
-// src/lib/favs.js
 const KEY = 'tb_favs';
 
 function safeRead() {
